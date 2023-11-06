@@ -20,6 +20,7 @@ namespace AE0672
         [SerializeField] private AudioSource melonCollectAudioSource;
 
         private PlayerMovement playerMovement;
+        [SerializeField] private AudioSource shootAudioSource;
 
        
 
@@ -34,6 +35,7 @@ namespace AE0672
             if (Input.GetKeyDown(KeyCode.J)&& bulletCount >0 )
             {
                 ShootMelonSeedBullet();
+                shootAudioSource.Play();
                 bulletCount--;
                 bulletText.text = "Seed Bullets: " + bulletCount  ;
             }

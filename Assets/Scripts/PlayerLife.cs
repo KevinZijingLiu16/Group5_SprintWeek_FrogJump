@@ -23,7 +23,7 @@ namespace AE0672
 
         private Rigidbody2D rb;
 
-        [SerializeField] private AudioSource deathAudioSource;
+        [SerializeField] private AudioSource damageAudioSource;
         [SerializeField] private AudioSource rebornAudioSource;
 
         // Start is called before the first frame update
@@ -64,11 +64,13 @@ namespace AE0672
 
             health = Mathf.Max(health, 0f);
 
+            damageAudioSource.Play();
             UpdateHealthBar();
 
             if (health <= 0f)
             {
                 Die();
+                rebornAudioSource.Play();
             }
         }
 
@@ -77,16 +79,16 @@ namespace AE0672
         {
             animator.SetTrigger("TriggerDeath");
             rb.bodyType = RigidbodyType2D.Static;
-            deathAudioSource.Play();
+            Invoke("Reborn", 1.5f);
 
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
-       // private void Reborn()
-        //{
+        private void Reborn()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             
            // rebornAudioSource.Play();
-        //}
+        }
 
 
     }
