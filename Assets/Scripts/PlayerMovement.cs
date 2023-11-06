@@ -25,6 +25,8 @@ namespace AE0672
 
         [SerializeField] private AudioSource jumpAudioSource;
 
+        public bool facingRight = true;
+
 
         
         
@@ -56,6 +58,23 @@ namespace AE0672
                 playerRb.velocity = new Vector2(playerRb.velocity.x, jumpForce);
             }
             AnimationCheckStatus();
+
+            if (directionX > 0f)
+            {
+                facingRight = true;
+            }
+            else if (directionX < 0f)
+            {
+                facingRight = false;
+            }
+            if (facingRight)
+            {
+                spriteRenderer.flipX = false;
+            }
+            else
+            {
+                spriteRenderer.flipX = true;
+            }
         }
 
         private void AnimationCheckStatus()
@@ -64,12 +83,12 @@ namespace AE0672
             if (directionX > 0f)
             {
                status = PlayerStatus.running;
-                spriteRenderer.flipX = false;
+                
             }
             else if (directionX < 0f)
             {
                 status = PlayerStatus.running;
-                spriteRenderer.flipX = true;
+               
             }
             else
             {
@@ -92,6 +111,12 @@ namespace AE0672
         {
            return Physics2D.BoxCast(boxCollider2D.bounds.center, boxCollider2D.bounds.size, 0f, Vector2.down, 0.1f, groundLayerMask);
         }   
+
+        public float GetDirectionX()
+        {
+            return directionX;
+            
+        }
        
     } 
 }
