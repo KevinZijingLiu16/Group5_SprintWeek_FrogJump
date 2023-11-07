@@ -64,13 +64,13 @@ namespace AE0672
 
             health = Mathf.Max(health, 0f);
 
-            damageAudioSource.Play();
             UpdateHealthBar();
+            damageAudioSource.Play();
 
             if (health <= 0f)
             {
                 Die();
-                rebornAudioSource.Play();
+            rebornAudioSource.Play();
             }
         }
 
@@ -79,15 +79,14 @@ namespace AE0672
         {
             animator.SetTrigger("TriggerDeath");
             rb.bodyType = RigidbodyType2D.Static;
-            Invoke("Reborn", 1.5f);
 
+            Invoke("Reborn", 1.5f);
         }
 
         private void Reborn()
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            
-           // rebornAudioSource.Play();
+
         }
 
 

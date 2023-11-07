@@ -18,9 +18,9 @@ namespace AE0672
         [SerializeField] private Transform bulletSpawnPoint;
 
         [SerializeField] private AudioSource melonCollectAudioSource;
+        [SerializeField] private AudioSource shootAudioSource;
 
         private PlayerMovement playerMovement;
-        [SerializeField] private AudioSource shootAudioSource;
 
        
 
