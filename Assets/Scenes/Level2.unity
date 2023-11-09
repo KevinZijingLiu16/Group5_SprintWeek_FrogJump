@@ -1326,6 +1326,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 261768649}
     - target: {fileID: 170716274883279043, guid: 312c87f6e2b8301478bae996645c59dc, type: 3}
+      propertyPath: bulletSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 170716274883279043, guid: 312c87f6e2b8301478bae996645c59dc, type: 3}
       propertyPath: melonCountText
       value: 
       objectReference: {fileID: 246353325}
