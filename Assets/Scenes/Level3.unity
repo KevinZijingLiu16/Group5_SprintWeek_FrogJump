@@ -1160,6 +1160,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 261768649}
     - target: {fileID: 170716274883279043, guid: 312c87f6e2b8301478bae996645c59dc, type: 3}
+      propertyPath: bulletSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 170716274883279043, guid: 312c87f6e2b8301478bae996645c59dc, type: 3}
       propertyPath: melonCountText
       value: 
       objectReference: {fileID: 246353325}
@@ -10380,7 +10384,7 @@ Transform:
   m_GameObject: {fileID: 973769755}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.11, y: -0.19, z: -2}
+  m_LocalPosition: {x: 0.69, y: -0.19, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

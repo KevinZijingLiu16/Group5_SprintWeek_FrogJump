@@ -67,14 +67,8 @@ namespace AE0672
             {
                 facingRight = false;
             }
-            if (facingRight)
-            {
-                spriteRenderer.flipX = false;
-            }
-            else
-            {
-                spriteRenderer.flipX = true;
-            }
+            // Adjusted to use IsFacingRight() method for consistency
+            spriteRenderer.flipX = !IsFacingRight();
         }
 
         private void AnimationCheckStatus()
@@ -116,6 +110,11 @@ namespace AE0672
         {
             return directionX;
             
+        }
+
+        public bool IsFacingRight()
+        {
+            return facingRight;
         }
        
     } 
