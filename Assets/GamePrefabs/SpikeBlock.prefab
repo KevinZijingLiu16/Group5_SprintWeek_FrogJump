@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6821000990706370925}
   - component: {fileID: 8313781561174623772}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Block
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 4940903684830042780}
   - component: {fileID: 6026391924270470705}
   - component: {fileID: 7771149933526498861}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SpikeBlock
   m_TagString: Trap
   m_Icon: {fileID: 0}
