@@ -7,6 +7,9 @@ TagManager:
   - Melon
   - Trap
   - CheckPoint
+  - Enermy
+  - bullet
+  - Tongue
   layers:
   - Default
   - TransparentFX

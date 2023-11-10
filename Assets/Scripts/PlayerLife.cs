@@ -44,7 +44,11 @@ namespace AE0672
                 TakeDamage(damage);
 
             }
+            if (collision.gameObject.CompareTag("Tongue"))
+            {
+                TakeDamage(damage);
 
+            }
 
 
 
