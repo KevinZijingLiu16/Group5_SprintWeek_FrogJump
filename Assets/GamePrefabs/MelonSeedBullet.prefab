@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4200039769428795049}
   - component: {fileID: 4549627519591938243}
   - component: {fileID: 1822393153163922156}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MelonSeedBullet
   m_TagString: bullet
   m_Icon: {fileID: 0}
