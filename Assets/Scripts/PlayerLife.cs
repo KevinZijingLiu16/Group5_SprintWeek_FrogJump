@@ -13,7 +13,7 @@ namespace AE0672
         public Image healthBar;
         public float health = 100f;
         public float damage = 25f;
-      
+
         public float maxHealth = 100f;
 
 
@@ -42,12 +42,12 @@ namespace AE0672
             if (collision.gameObject.CompareTag("Trap"))
             {
                 TakeDamage(damage);
-               
+
             }
 
-           
 
-          
+
+
         }
 
         void UpdateHealthBar()
@@ -70,11 +70,11 @@ namespace AE0672
             if (health <= 0f)
             {
                 Die();
-            rebornAudioSource.Play();
+                rebornAudioSource.Play();
             }
         }
 
-        
+
         private void Die()
         {
             animator.SetTrigger("TriggerDeath");
